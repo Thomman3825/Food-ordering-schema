@@ -27,7 +27,7 @@ public class App
             while(orderData.next()){
                 System.out.println(orderData.getInt(1) + " "+ orderData.getDate(2));
             }
-        ResultSet nearbyRest = s.executeQuery(" select * from restaurants r join customers c on c.location = r.location ");
+        ResultSet nearbyRest = s.executeQuery(" select * from restaurants r join customers c on c.location = r.location where  c.location='tvm' ");
             while(nearbyRest.next()){
                 System.out.println(nearbyRest.getString(2)+" "+nearbyRest.getString(3)+" "+nearbyRest.getInt(4));
             }
